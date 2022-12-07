@@ -76,7 +76,7 @@ def tegn(delta_tid):
 
 # Koden for cirklen og begynder at tegne vores punkter
     x, y = cirkel(tegn.tid, (xl, yl), -100, -0.3, 1)
-    x1, y1 = cirkel(tegn.tid, (x , y), -300, -0,3, 0)
+    x1, y1 = cirkel(tegn.tid, (x , y), -300, -0.3, 0)
     arcade.draw_circle_filled(x1, y1, 5, arcade.csscolor.WHITE)
     if len(tegn.track) == CIRKEL:
         tegn.track.fjern(CIRKEL)
@@ -94,7 +94,7 @@ def main():
 
     arcade.set_background_color(arcade.csscolor.GREEN)
 
-    tegn.track_linje = list()
+
     tegn.tid = 0.0
     tegn.track = list()
     #Funktion kan ikke køre hvis der ikke er en tidsbeløb
