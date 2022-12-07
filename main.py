@@ -68,15 +68,15 @@ def tegn(delta_tid):
 
 
 # Koden for linjen som vores cirkel følger
-    x_linje,y_linje = linje(tegn.tid, (0,650),(90,0))
+    xl,yl = linje(tegn.tid, (0,650),(90,0))
 #vores usynlige punkt:
 # arcade.draw_circle_filled(x_linje, y_linje, 5, arcade.csscolor.RED)
 
 
 
 # Koden for cirklen og begynder at tegne vores punkter
-    x, y = cirkel(tegn.tid, (x_linje, y_linje), -100, -0.3, 1)
-    x1, y1 = cirkel(tegn.tid, (x , y), -300, -0.3, 0)
+    x, y = cirkel(tegn.tid, (xl, yl), -100, -0.3, 1)
+    x1, y1 = cirkel(tegn.tid, (x , y), -300, -0,3, 0)
     arcade.draw_circle_filled(x1, y1, 5, arcade.csscolor.WHITE)
     if len(tegn.track) == CIRKEL:
         tegn.track.fjern(CIRKEL)
